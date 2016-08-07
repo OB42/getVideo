@@ -1,0 +1,24 @@
+{
+  "name": "getvideo",
+  "version": "1.0.0",
+  "description": "Get the url of the first video on a given page.",
+  "main": "getVideo.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oabtm/getVideo.git"
+  },
+  "keywords": [
+    "scraping",
+    "video"
+  ],
+  "dependencies":{
+      "parsonic":"1.x.x",
+      "request": "2.74.0"
+  },
+  "author": "oabtm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oabtm/getVideo/issues"
+  },
+  "homepage": "https://github.com/oabtm/getVideo#readme"
+}

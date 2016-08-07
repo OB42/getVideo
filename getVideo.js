@@ -6,6 +6,7 @@ const fs = require("fs");
 /*Most sites using Flash or Mediastream will send a regular video file
 if we're sending a mobile user-agent*/
 var userAgent = "Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.133 Mobile Safari/535.19";
+var nightmareOptions = { show:false, webPreferences: {images:false, webaudio:false, plugins:false}}
 function getVideo(){
     var videos = document.querySelectorAll("video, video > source");
     for(var v = 0; v < videos.length; v++){
@@ -38,7 +39,7 @@ module.exports = (videoUrl, callback) => {
     }
 };
 function headlessParsing(videoUrl, callback){
-    Nightmare({ show: false})
+    Nightmare(nightmareOptions)
     .useragent(userAgent)
     .goto(videoUrl)
     .evaluate(getVideo)
@@ -62,7 +63,7 @@ function parsing(videoUrl, callback){
 }
 function firstParsing(parsedUrl, callback){
     var filename = __dirname + "/tmp/" + encodeURIComponent(parsedUrl.href) + ".html";
-    Nightmare({ show: false})
+    Nightmare(nightmareOptions)
     .useragent(userAgent)
     .goto(parsedUrl.href)
     .html(filename, "HTMLOnly")

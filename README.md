@@ -13,3 +13,4 @@ getVideo("https://youtube.com/watch?v=dQw4w9WgXcQ", (err, video) => {
     }
 });
 ```
+If you want to use getVideo without a graphical environment, you'll need to run node through xvfb-run.

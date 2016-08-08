@@ -101,9 +101,8 @@ function firstParsing(parsedUrl, callback) {
 						if (results) {
 							if (results.error) {
 								throw results.error;
-							} else {
-								callback(null, false, results);
 							}
+							callback(null, false, results);
 						} else if (video) {
 							callback(null, true, video);
 						} else {

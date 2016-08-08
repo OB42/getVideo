@@ -1,6 +1,6 @@
 {
   "name": "getvideo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Get the url of the first video on a given page.",
   "main": "getVideo.js",
   "repository": {

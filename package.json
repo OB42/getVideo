@@ -1,6 +1,6 @@
 {
   "name": "getvideo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Get the url of the first video on a given page.",
   "main": "getVideo.js",
   "repository": {
@@ -12,7 +12,7 @@
     "video"
   ],
   "dependencies":{
-      "parsonic":"1.x.x",
+      "parsonic":"1.1.1",
       "request": "2.74.0"
   },
   "author": "oabtm",
